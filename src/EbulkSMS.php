@@ -263,7 +263,7 @@ class EbulkSMS
      */
     private function post($url, $body)
     {
-        return $this->makeHttpRequest('PUT', $url, $body);
+        return $this->makeHttpRequest('POST', $url, $body);
     }
 
     /**
