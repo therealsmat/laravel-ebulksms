@@ -119,6 +119,18 @@ class EbulkSMS
         ]);
     }
 
+    public function fromSender($sender)
+    {
+        $senderName = trim($sender);
+
+        if (is_null($sender)) throw new \Exception('Sender name is invalid!');
+
+        if (strlen($senderName) > 11) throw new \Exception('Your sender name must be less than or equal to 11 characters');
+
+        $this->senderName = $senderName;
+        return $this;
+    }
+
     /**
      * Recipients phone numbers. Split
      * @param $recipients
@@ -233,7 +245,7 @@ class EbulkSMS
     private function makeHttpRequest($method, $url, $body)
     {
         if (is_null($method) || !in_array($method, $this->httpMethods)) {
-            throw new \Exception('Method is invalid!');
+            throw new \Exception('Method ' . $method .' is invalid!');
         }
 
         $this->response = $this->http->{strtolower($method)}(
@@ -251,7 +263,7 @@ class EbulkSMS
      */
     private function post($url, $body)
     {
-        return $this->makeHttpRequest('POST', $url, $body);
+        return $this->makeHttpRequest('PUT', $url, $body);
     }
 
     /**

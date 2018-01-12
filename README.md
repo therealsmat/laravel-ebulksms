@@ -1,11 +1,11 @@
 # laravel-ebulksms
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
+![Latest Version on Packagist][ico-version]
+![Software License][ico-license](LICENSE.md)
+![Total Downloads][ico-downloads]
 
 ## Requirements
-[PHP](https://php.net)5.4 or newer, [Composer](https://getcomposer.org) are required.
+[PHP](https://php.net) 5.4 or greater, [Composer](https://getcomposer.org) are required.
 
 ## Installation
 You need to be have an Ebulk account to use this package. If you do not have one, [click here](https://ebulksms.com).
@@ -55,9 +55,9 @@ You will get a config file named `ebulksms.php` in your config directory. Custom
 Add the following to your .env file
 
 ```dotenv
-    EBULK_USERNAME=***********
-    EBULK_API_KEY=************
-    EBULK_SENDER_NAME=********
+EBULK_USERNAME=***********
+EBULK_API_KEY=************
+EBULK_SENDER_NAME=********
 ```
 
 ```php
@@ -128,5 +128,5 @@ For balance enquiry
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/jeroen-g/laravel-packager.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-EUPL-yellow.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-yellow.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/jeroen-g/laravel-packager.svg?style=flat-square
