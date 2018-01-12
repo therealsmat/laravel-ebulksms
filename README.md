@@ -1,4 +1,4 @@
-# :package_name
+# laravel-ebulksms
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -7,34 +7,54 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
+## Requirements
+[PHP](https://php.net)5.4 or newer, [Composer](https://getcomposer.org) are required.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+## Installation
+You need to be have an Ebulk account to use this package. If you do not have one, [click here](https://ebulksms.com).
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
-
-## Install
-
-Via Composer
-
+Require the package with composer.
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require therealSMAT/laravel-ebulksms
 ```
+You might need to add ` therealsmat\Ebulksms\EbulkSmsServiceProvider::class,` to the providers array `config/app.php` if your laravel version is less than 5.5.
+
+Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
+
+## Configuration
+Publish the configuration file by using this command
+`php artisan vendor:publish --provider="therealsmat\Ebulksms\EbulkSmsServiceProvider::class"`
+
+You will get a config file named `ebulksms.php` in your config directory. Customize the defaults to your ebulk sms settings.
+```php
+    <?php 
+    
+    return [
+    
+        /**
+         * Your login username on eBulkSMS (same as your email address)
+         */
+        'username'          => getenv('EBULK_USERNAME'),
+    
+        /**
+         * Your Ebulk SMS Api Key
+         */
+        'apiKey'            => getenv('EBULK_API_KEY'),
+    
+        /**
+         * Your chosen sender name
+         */
+        'sender'            => getenv('EBULK_SENDER_NAME'),
+    
+        /**
+         * Country code to be appended to each phone number
+         */
+        'country_code'      => '234'
+    ];
+```
+
 
 ## Usage
-
 ``` php
 $skeleton = new League\Skeleton();
 echo $skeleton->echoPhrase('Hello, League!');
