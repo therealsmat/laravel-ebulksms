@@ -87,7 +87,44 @@ Add the following to your .env file
         }
     }
 ```
-
+For a flash message
+```php
+    <?php
+        
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        use therealsmat\Ebulksms\EbulkSMS;
+        
+        class HomeController extends Controller
+        {
+            public function index(EbulkSMS $sms)
+            {
+                $message = 'Hello world!';
+                $recipients = '0701********';
+                return $sms->composeMessage($message)
+                            ->addRecipients($recipients)
+                            ->flash();
+            }
+        }
+```
+For balance enquiry
+```php
+    <?php
+            
+            namespace App\Http\Controllers;
+            
+            use Illuminate\Http\Request;
+            use therealsmat\Ebulksms\EbulkSMS;
+            
+            class HomeController extends Controller
+            {
+                public function index(EbulkSMS $sms)
+                {
+                    return $sms->getBalance();
+                }
+            }
+```
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
