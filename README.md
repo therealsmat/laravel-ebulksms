@@ -20,7 +20,7 @@ Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add 
 
 ## Configuration
 Publish the configuration file by using this command
-`php artisan vendor:publish --provider="therealsmat\Ebulksms\EbulkSmsServiceProvider::class"`
+`php artisan vendor:publish --provider="therealsmat\Ebulksms\EbulkSmsServiceProvider"`
 
 You will get a config file named `ebulksms.php` in your config directory. Customize the defaults to your ebulk sms settings.
 ```php
