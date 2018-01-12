@@ -1,7 +1,7 @@
 # laravel-ebulksms
 
 ![Latest Version on Packagist][ico-version]
-![Software License][ico-license](LICENSE.md)
+![Software License][ico-license]
 ![Total Downloads][ico-downloads]
 
 ## Requirements
@@ -127,6 +127,6 @@ For balance enquiry
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/jeroen-g/laravel-packager.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/therealsmat/laravel-ebulksms.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-yellow.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/jeroen-g/laravel-packager.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/therealsmat/laravel-ebulksmsr.svg?style=flat-square
