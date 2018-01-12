@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "therealsmat\\laravel-ebulksms\\": "src"
+            "therealsmat\\Ebulksms\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "therealsmat\\laravel-ebulksms\\": "tests"
+            "therealsmat\\Ebulksms\\": "tests"
         }
     },
     "scripts": {
