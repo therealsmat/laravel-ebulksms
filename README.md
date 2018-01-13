@@ -5,6 +5,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/therealsmat/laravel-ebulksms/v/unstable)](https://packagist.org/packages/therealsmat/laravel-ebulksms)
 [![License](https://poser.pugx.org/therealsmat/laravel-ebulksms/license)](https://packagist.org/packages/therealsmat/laravel-ebulksms)
 
+A package built to allow Nigerian laravel developers easily send sms from their application. 
 ## Requirements
 [PHP](https://php.net) 5.4 or greater, [Composer](https://getcomposer.org) are required.
 
