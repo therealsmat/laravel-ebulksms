@@ -7,7 +7,7 @@
 
 A package built to allow Nigerian laravel developers easily send sms from their application. 
 ## Requirements
-[PHP](https://php.net) 5.4 or greater, [Composer](https://getcomposer.org) are required.
+[PHP](https://php.net) 5.4+, [Composer](https://getcomposer.org) are required.
 
 ## Installation
 You need to be have an Ebulk account to use this package. If you do not have one, [click here](https://ebulksms.com).
@@ -61,11 +61,12 @@ EBULK_USERNAME=***********
 EBULK_API_KEY=************
 EBULK_SENDER_NAME=********
 ```
+Create a route endpoint
 
 ```php
     Route::get('/sms', 'HomeController@index');
 ```
-  For a text message
+For a text message
 ```php
     <?php
     
