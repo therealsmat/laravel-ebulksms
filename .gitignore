@@ -2,3 +2,4 @@ vendor
 .editorconfig
 CHANGELOG.md
 CONTRIBUTING.md
+.styleci.yml
